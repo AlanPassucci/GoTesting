@@ -138,12 +138,12 @@ func TestHandler_SimulateHunt(t *testing.T) {
 
 		reqConfigPrey, resConfigPrey := createRequestTest(http.MethodPut, "/v1/prey", reqBodyConfigPrey)
 		reqConfigShark, resConfigShark := createRequestTest(http.MethodPut, "/v1/shark", reqBodyConfigShark)
-		reqConfigSimulateHunt, resSimulateHunt := createRequestTest(http.MethodPost, "/v1/simulate", "")
+		reqSimulateHunt, resSimulateHunt := createRequestTest(http.MethodPost, "/v1/simulate", "")
 
 		// Act
 		server.ServeHTTP(resConfigPrey, reqConfigPrey)
 		server.ServeHTTP(resConfigShark, reqConfigShark)
-		server.ServeHTTP(resSimulateHunt, reqConfigSimulateHunt)
+		server.ServeHTTP(resSimulateHunt, reqSimulateHunt)
 
 		// Assert
 		assert.Equal(t, expectedStatusCode, resSimulateHunt.Code)
@@ -177,12 +177,12 @@ func TestHandler_SimulateHunt(t *testing.T) {
 
 		reqConfigPrey, resConfigPrey := createRequestTest(http.MethodPut, "/v1/prey", reqBodyConfigPrey)
 		reqConfigShark, resConfigShark := createRequestTest(http.MethodPut, "/v1/shark", reqBodyConfigShark)
-		reqConfigSimulateHunt, resSimulateHunt := createRequestTest(http.MethodPost, "/v1/simulate", "")
+		reqSimulateHunt, resSimulateHunt := createRequestTest(http.MethodPost, "/v1/simulate", "")
 
 		// Act
 		server.ServeHTTP(resConfigPrey, reqConfigPrey)
 		server.ServeHTTP(resConfigShark, reqConfigShark)
-		server.ServeHTTP(resSimulateHunt, reqConfigSimulateHunt)
+		server.ServeHTTP(resSimulateHunt, reqSimulateHunt)
 
 		// Assert
 		assert.Equal(t, expectedStatusCode, resSimulateHunt.Code)
@@ -216,12 +216,12 @@ func TestHandler_SimulateHunt(t *testing.T) {
 
 		reqConfigPrey, resConfigPrey := createRequestTest(http.MethodPut, "/v1/prey", reqBodyConfigPrey)
 		reqConfigShark, resConfigShark := createRequestTest(http.MethodPut, "/v1/shark", reqBodyConfigShark)
-		reqConfigSimulateHunt, resSimulateHunt := createRequestTest(http.MethodPost, "/v1/simulate", "")
+		reqSimulateHunt, resSimulateHunt := createRequestTest(http.MethodPost, "/v1/simulate", "")
 
 		// Act
 		server.ServeHTTP(resConfigPrey, reqConfigPrey)
 		server.ServeHTTP(resConfigShark, reqConfigShark)
-		server.ServeHTTP(resSimulateHunt, reqConfigSimulateHunt)
+		server.ServeHTTP(resSimulateHunt, reqSimulateHunt)
 
 		// Assert
 		assert.Equal(t, expectedStatusCode, resSimulateHunt.Code)
