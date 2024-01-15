@@ -10,7 +10,7 @@ import (
 )
 
 func createTestServer() *gin.Engine {
-	server := gin.Default()
+	server := gin.New()
 	router.MapRoutes(server)
 
 	return server

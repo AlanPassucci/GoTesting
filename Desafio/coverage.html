@@ -248,7 +248,7 @@ import (
 )
 
 func createTestServer() *gin.Engine <span class="cov8" title="1">{
-        server := gin.Default()
+        server := gin.New()
         router.MapRoutes(server)
 
         return server
